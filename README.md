@@ -17,13 +17,17 @@ my Intro AI class, together with the writeup and the
 * `spect-resplit.*.csv`: Original binarized data resplit
   proportionally to prevalence *in the sample.* Not clear
   that this is the same as prevalence in the population.
-  Size of training and test instances is same as in
-  original.
+  Training / test instances are split 2::1.
 
 * `spect-itg.*.csv`: Features and class are taken from the
   continuous version of the original data, and binarized for
-  maximized information-theoretic gain. Training / test
-  instances are split 2::1.
+  maximized information-theoretic gain.  Same training and
+  test instances as original.
+
+* `spect-resplit-itg.*.csv`: Features and class are taken
+  from the continuous version of the original data, and
+  binarized for maximized information-theoretic
+  gain. Resplit as above.
 
 The original resources are also available:
 
