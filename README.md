@@ -34,9 +34,11 @@ my Intro AI class, together with the writeup and the
 The original resources are also available:
 
 * [SPECT](https://archive.ics.uci.edu/ml/datasets/SPECT+Heart):
-  Binarized data from the original paper.
+  Binarized data from the original paper. This repo contains
+  a copy of the data.
   
 * [SPECTF](https://archive.ics.uci.edu/ml/datasets/SPECTF+Heart):
   Continuous version of the data from the original paper.
+  This repo contains a copy of the data.
 
-The binarization was via `itg.py`. 
+The binarization was via `itg.py`. The resplit was via `resplit.py`.
