@@ -22,7 +22,9 @@ my Intro AI class, together with the writeup and the
 * `spect-itg.*.csv`: Features and class are taken from the
   continuous version of the original data, and binarized for
   maximized information-theoretic gain.  Same training and
-  test instances as original.
+  test instances as original. Both the training and test
+  instances are used in the binarization, which perhaps
+  improves it unfairly.
 
 * `spect-resplit-itg.*.csv`: Features and class are taken
   from the continuous version of the original data, and
@@ -36,3 +38,5 @@ The original resources are also available:
   
 * [SPECTF](https://archive.ics.uci.edu/ml/datasets/SPECTF+Heart):
   Continuous version of the data from the original paper.
+
+The binarization was via `itg.py`. 
