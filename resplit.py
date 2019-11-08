@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
+# Resplit test and training data to get more training data.
+
 import csv
 import random
 import sys
 
+# Bipartition the data according to f.
 def split(data, f):
     result = [[], []]
     for t in data:
         result[f(t)].append(t)
     return tuple(result)
 
+# Read in a CSV file containing data.
 def parse(filename):
     with open(filename, "r") as f:
         rows = csv.reader(f)
@@ -20,12 +24,14 @@ def parse(filename):
             data.append((c, fs))
         return data
 
+# Generate a CSV file from the data.
 def gen(filename, data):
     with open(filename, "w") as f:
         rows = csv.writer(f)
         for c, fs in data:
             rows.writerow([c] + fs)
 
+# Do the resplits.
 for cl in ["orig", "itg"]:
     train = parse("spect-" + cl + ".train.csv")
     test = parse("spect-" + cl + ".test.csv")
